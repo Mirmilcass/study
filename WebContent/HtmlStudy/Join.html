@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>join</title>
+</head>
+<body>
+	<h1 align="center">
+		<em>회원가입을 환영합니다.</em>
+	</h1>
+	<hr>
+	<table border="1" bordercolor="blue" align="center">
+		<tr>
+			<td align="center">이름</td>
+			<td><input type="text" size="50" maxlength="12"></td>
+			<!-- 텍스트 <input type="text" size="길이" maxlength="입력수"> -->
+		</tr>
+		<tr>
+			<td align="center">주민번호</td>
+			<td colspan="2"><input type="text" size="10" maxlength="8">&nbsp;-&nbsp;
+				<input type="text" size="10" maxlength="7"></td>
+		</tr>
+		<tr>
+			<td align="center">성별</td>
+			<td colspan="2"><input type="radio" name="sex" value="fmel">&nbsp;남&nbsp;&nbsp;
+			<input type="radio" name="sex" value="mel">&nbsp;여&nbsp;</td>
+		</tr>
+		<!-- 라디오 type="radio" name="그룹지정" value="단추정보" -->
+		<tr>
+			<td align="center">연락처</td>
+			<td><select name="fiesttels">
+					<option value="010">010</option>
+					<option value="011">011</option>
+					<option value="017">017</option>
+					<option value="02">02</option>
+					<option value="032">032</option>
+					<option value="031">031</option>
+			</select> &nbsp;-&nbsp; <input type="tel" size="4" maxlength="4">&nbsp;-&nbsp;
+				<input type="tel" size="4" maxlength="4"></td>
+		</tr>
+		<tr>
+			<td align="center">계정</td>
+			<td><input type="text" size="50" maxlength="10"></td>
+		</tr>
+		<tr>
+			<td align="center">비밀번호</td>
+			<td><input type="password" size="50" maxlength="12"></td>
+		</tr>
+		<!-- 비밀번호 인풋 -->
+		<tr>
+			<td align="center">주소</td>
+			<td><input type="text" size="50" maxlength="50"></td>
+		</tr>
+		<tr>
+			<td align="center">E-Mail</td>
+			<td><input type="email" size="50" maxlength="50"></td>
+		</tr>
+		<!-- 전자 메일 인풋 -->
+		<tr>
+			<td align="center">홈페이지</td>
+			<td><input type="url" size="50" maxlength="50"></td>
+		</tr>
+		<!-- URL 인풋 -->
+		<tr>
+			<td align="center">직업</td>
+			<td><select name="jobs">
+					<option value="stu">학생</option>
+					<option value="op">회사원</option>
+					<option value="pre">프리랜서</option>
+					<option value="oner">개인사업자</option>
+					<option value="rawoner">법인 사업자</option>
+					<option value="house">주부</option>
+					<option value="etc">기타</option>
+			</select></td>
+			<!-- 선택 박스 -->
+		</tr>
+		<tr>
+			<td align="center">취미</td>
+			<td><input type="checkbox"  name="likes" value="ski">&nbsp;스키&nbsp;<input
+				type="checkbox" name="likes" value="swem">&nbsp;수영&nbsp;</td>
+		</tr>
+		<!-- 체크박스 -->
+		<tr>
+			<td align="center">자기소개</td>
+			<td><textarea name="commnets" rows="10" cols="48"></textarea></td>
+		</tr>
+		<!-- 글상자 -->
+		<tr>
+			<td colspan="2" align="center"><input type="submit" value="가입">&nbsp;&nbsp;<input
+				type="reset" value="취소"></td>
+			<!-- 전송  인풋 <input type="submit" value="가입">
+			띄어쓰기 &nbsp;
+			리셋 인풋 <input type="reset" value="취소"> -->
+		</tr>
+		<!-- 그외 input type 예제
+		숫자 - nuber min="0" max="20"
+		범위 - range min="0" max="20" step="5"
+		색상 - color
+		날짜 - date -->
+	</table>
+</body>
+</html>
