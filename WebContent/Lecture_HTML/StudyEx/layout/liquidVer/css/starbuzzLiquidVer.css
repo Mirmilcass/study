@@ -1,0 +1,84 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #b5a789;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: small;
+	margin: 0px;
+}
+
+#header {
+	background-color: #675c47;
+	margin: 10px;
+	height: 108px;
+}
+
+#main {
+	background: #efe5d0 url(../../images/background.gif) top left;
+	font-size: 105%;
+	padding: 15px;
+	margin: 0px 330px 10px 10px;
+}
+
+h1 {
+	font-size: 120%;
+	color: #954b4b;
+}
+
+#sidebar {
+	background: #efe5d0 url(../../images/background.gif) bottom right;
+	font-size: 105%;
+	padding: 15px;
+	margin: 0px 10px 10px 10px;
+	width: 280px;
+	float: right;
+}
+
+#footer {
+	background-color: #675c47;
+	color: #efe5d0;
+	font-size: 95%;
+	padding: 15px;
+	margin: 10px;
+	text-align: center;
+	clear: right;
+	/* 
+	float 속성
+	----------
+	태그에  float 속성을 사용하면 태그를 블럭에 상관없이 왼쪽, 오른쪽에 위치시킬 수 있다.
+	웹 페이지의 레이아웃을 구성할 때 유용하다.
+	left: 태그를 왼쪽에 위치
+	right: 태그를 오른쪽에 위치
+	
+	clear: 속성
+	-----------------
+	태그에 float속성을 사용하게 되면 그 이후에 태그들은 float속성의 영향을 받는다.
+	이 때 clear 속성을 사용하면 이후로는 float 속성을 벗어날 수 있다.
+	clear: left : left float 속성을 클리어
+	clear: right : right float 속성을 클리어
+	clear: both : float 속성을 클리어
+	해당 요소는 페이지 위로 흐르게 하고 이 요소의 왼쪽, 오른쪽 또는 
+	양쪽에서 떠나니지 않도록 한다. */
+}
+
+.slogan {
+	color: #954b4b;
+	text-align: center;
+}
+
+.beanheading {
+	text-align: center;
+	line-height: 1.8em;
+}
+
+a:link {
+	color: #b76666;
+	text-decoration: none;
+	border-bottom: thin dotted #b76666;
+}
+
+a:VISITED {
+	color: #675c47;
+	text-decoration: none;
+	border-bottom: thin dotted #675c47;
+}

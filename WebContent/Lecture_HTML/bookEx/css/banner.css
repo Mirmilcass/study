@@ -1,0 +1,77 @@
+@CHARSET "UTF-8";
+
+@IMPORT "reset.css";
+
+/* 폰트 */
+/* @import url('http://api.mobilis.co.kr/webfonts/v2/css/NanumPenWeb'); */
+
+@font-face {
+	font-family: 'Jeju Hallasan', cursive;
+	@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+}
+
+body {
+	padding: 20px;
+	background-color: #333333;
+}
+
+a.banner {
+	display: block;
+	width: 728px;
+	height: 176px;
+	border: 1px solid #555;
+	background: url("../images/banner-arrow.png") no-repeat -100px 140px,
+		url("../images/banner-photo.png") no-repeat -40px 220px,
+		url("../images/banner-09.png") no-repeat -20px -380px,
+		url("../images/banner-bg.png") no-repeat 0 0;
+	position: relative;
+	transition: background-position .2s ease-in .2s;
+}
+
+a.banner:hover, a.banner:FOCUS {
+	/* 
+	hover: 마우스 올린 상태
+	focus: 키보드의 탭키가 마우스 올린 상태와 동일 행동을 함.
+	 */
+	background-position: 
+		20px 140px,
+		-40px 20px,
+		-20px 90px,
+		0 0;
+}
+
+a.banner .banner-logo {
+	position: absolute;
+	top: 20px;
+	left: 270px;
+	transition: left .2s linear .4s;
+}
+
+a.banner:hover .banner-logo, a.banner:focus .banner-logo {
+	left: 540px;
+}
+
+a.banner .banner-desc {
+	opacity: 0;
+	font-family: 'Jeju Hallasan', cursive;
+	font: 23px/0.9 "NanumPenWeb", "나눔 손글씨 펜", "Nanum Pen Script", "Jeju Hallasan"; /* 웹 폰트 파일 설정 */
+	position: absolute;
+	top: 35px;
+	left: 170px;
+	color: #4ec1cd;
+	transition: opacity .2s linear .5s;
+	/*
+	무빙 명령
+		hover 부분에서 설정한 개별 속성 또는 all을 이용 전체 적용 
+		트랜지션이 지속되는 시간 양수값 사용
+		움직입 설정 
+			Linear : 시작 부터 끝까지 같은 속도
+			ease-in : 가속곡선
+			ease-out : 감속곡선
+			ease-in-out : 감속 - 가속 - 감속 코너링같은 움직임
+		트랜지션이 일어나기 전 대기시간 */
+}
+
+a.banner:hover .banner-desc, a.banner:focus .banner-desc {
+	opacity: 1;
+}

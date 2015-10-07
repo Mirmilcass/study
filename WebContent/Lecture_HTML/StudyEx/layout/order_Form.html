@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>커피 공장</title>
+<style type="text/css">
+/*
+margin-left : 왼쪽 여백
+margin-right : 오른쪽 여백
+border : 경계선
+padding : 내용과 경계선 사이의 안쪽 여백 
+*/
+body {
+	background-color: #d2b48c;
+	margin-left: 20%;
+	margin-right: 20%;
+	border: 2px dotted black;
+	padding: 20px 20px 20px 20px;
+	font-family: sans-serif;
+}
+</style>
+</head>
+<body>
+	<h1 align="center">커피공장</h1>
+	<p>
+	<hr>
+	<p>
+	<h3>
+		<b>아래 양식을 채운 후, "주문" 버튼을 클릭하세요.</b>
+	</h3>
+	<p>
+		커피를 선택하세요 : <select name="valuem">
+			<option value="house">하우스</option>
+			<option value="top">T.O.P</option>
+			<option value="maxwell">맥스웰</option>
+		</select>
+	<p>
+		유형: 
+		 <input type="radio" value="nocut" name="type">&nbsp;분쇄하지 않은 커피
+		 <input type="radio" value="cut" name="type">&nbsp;분쇄한 커피
+	
+	<p>
+		상품 개수 : <input type="number" size="15" maxlength="100">
+	<p>
+		배송 일자 : <input type="date" size="15" maxlength="100">
+	<p>
+		기타:<br>
+		 <input type="checkbox" name="addsevice" value="pre">&nbsp;선물	포장<br>
+		 <input type="checkbox" name="addsevice" value="catalog">&nbsp;카탈로그	포장
+	<p>
+		배송지 주소 : <br> 
+		이름: <input type="text" name="name"><br>
+		주소: <input type="text" name="address"><br> 
+		도시: <input type="text" name="city"><br> 
+		지역: <input type="text" name="area"><br> 
+		우편번호: <input type="text" name="mail"><br>
+		전화번호: <input type="tel" name="tel">
+	<p>
+		고객 요구사항 :<br>
+		<textarea name="commnets" rows="5" cols="15"></textarea>
+	<p>
+		<input type="submit" value="주문">
+</body>
+</html>

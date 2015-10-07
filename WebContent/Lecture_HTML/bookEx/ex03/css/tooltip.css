@@ -1,0 +1,100 @@
+@CHARSET "UTF-8";
+@import "../../css/reset.css";
+@import url(https://fonts.googleapis.com/css?family=Lato:100);
+
+body {
+padding: 150px;
+background: #2b2b2b url(../images/bg_tile.jpg);
+}
+
+h1 {
+	margin-bottom: 40px;
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+}
+
+.gallery-nav li {
+	float: left;
+	/* 피벗 기능 */
+	margin-right: 100px;
+}
+
+a.tooltip {
+	display: block;
+	width: 100px;
+	height: 100px;
+	border: 5px solid #4b4b4b;
+	background: #fff no-repeat center;
+	border-radius: 55px;
+	-webkit-border-radius: 55px;
+	-khtml-border-radius: 55px;
+	-moz-border-radius: 55px;
+	
+	background-size: cover;
+	
+	position: relative;
+}
+
+a.tooltip:HOVER,
+a.tooltip:FOCUS {
+	border-color: #fff;
+}
+
+a.tooltip.photo1 {
+	background-image: url(../images/sussjini-bbo.jpg);
+}
+
+a.tooltip.photo2 {
+	background-image: url(../images/khk-artwork.png);
+}
+
+a.tooltip.photo3 {
+	background-image: url(../images/interview-yamoo9.png);
+}
+
+
+a.tooltip .tooltip-box {
+	opacity: 0;
+	width: 20em;
+	padding: .8em;
+	background: #111;
+	
+	position: absolute;
+	bottom: 100px;
+	
+	left: 50%;
+	margin-left: -10.4em;
+	
+	border-radius: 15px 0px;
+	
+	transition: all .4s ease-in .3s;
+}
+
+a.tooltip .tooltip-box:before {
+	content: ' ';
+	position: absolute;
+	bottom: -10px;
+	left: 120px;
+	border-top: 10px solid #111;
+	
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	
+}
+
+a.tooltip:HOVER .tooltip-box,
+a.tooltip:FOCUS .tooltip-box {
+	opacity: 1;
+	bottom: 90px;
+}
+
+a.tooltip .tooltip-title {
+	color: #fff;
+}
+
+a.tooltip .tooltip-desc {
+	margin-bottom: 0;
+	font-size: 11px;
+	text-align: justify;
+	color: #bcbcbc;
+}

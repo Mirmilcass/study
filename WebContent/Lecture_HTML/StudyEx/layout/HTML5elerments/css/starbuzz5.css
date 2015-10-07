@@ -1,0 +1,160 @@
+body {
+	background-color: #b5a789;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: small;
+	margin: 0px;
+}
+
+header#top {
+	background-color: #675c47;
+	margin: 10px;
+	height: 108px;
+}
+
+header img#Slogan {
+	float: right;
+}
+
+#award {
+	position: absolute;
+	top: 10px;
+	right: 300px;
+}
+
+ul {
+	background-color: #efe5d0;
+	margin: 10px 10px 0px 10px;
+	/* 리스트 점이 사라짐 */
+	list-style-type: none;
+	padding: 5px 0px 5px 0px;
+}
+
+ul li {
+	/* 인라인 요소 처럼 각각의 리스트가 나열됨 */
+	display: inline;
+	padding: 5px 10px 5px 10px;
+}
+
+ul li a:link, ul li a:VISITED {
+	color:#954b4b;
+	border-bottom: none;
+	font-style: bold;
+}
+
+ul li.selected {
+	background-color: #c8b99c;
+}
+
+/* div#tablecontainer {
+	
+	CSS table display 적용
+	tableContainer는 가장 바깥에 있는 div 를 전체 테이블 구조를 표현
+	
+	display: table;
+	테이블에 있는 셀에 10px의 테두리 공간을 추가한다.
+	border-spacing: 10px;
+}
+
+div#tableRow {
+	
+	tableRow div 는 테이블에 있는 한 행을 나타냄.
+	이 테이블에는 행이 하나만 있으므로, 규칙도 하나만 있으면 됨.
+	행이 여러개라면 하나의 규칙만 사용해서 모든 행을 한번에 꾸밀 수 있는 클래스를 사용.
+	예를 들어 div.tableRow
+	
+	display: table-row;
+}
+ */
+ARTICLE {
+	border-spacing: 10px;
+}
+
+SECTION#drinks {
+	display: table-cell;
+	background-color: #efe5d0;
+	width: 20%;
+	padding: 15px;
+	vertical-align: top;
+	margin: 10px;
+}
+
+SECTION#main, SECTION#blog {
+	display: table-cell;
+	vertical-align: top;
+	background: #efe5d0 url(../../images/background.gif) top left;
+	font-size: 105%;
+	padding: 15px;
+	/* margin: 0px 10px 10px 10px; */
+}
+
+aside {
+	display: table-cell;
+	background: #efe5d0 url(../../images/background.gif) top left;
+	font-size: 105%;
+	padding: 15px;
+	/* 	margin: 0px 10px 10px 10px;
+	position: absolute;
+	top: 128px;
+	right: 0px;
+	 */
+	 width: 280px;
+}
+
+footer {
+	background-color: #675c47;
+	color: #efe5d0;
+	text-align: center;
+	padding: 15px;
+	margin: 10px;
+	font-size: 90%;
+}
+
+h1 {
+	font-size: 120%;
+	color: #954b4b;
+}
+
+.slogan {
+	color: #954b4b;
+}
+
+.beanheading {
+	text-align: center;
+	line-height: 1.8em;
+}
+
+a:link {
+	color: #b76666;
+	text-decoration: none;
+	border-bottom: thin dotted #b76666;
+}
+
+a:visited {
+	color: #675c47;
+	text-decoration: none;
+	border-bottom: thin dotted #675c47;
+}
+
+nav#ticket {
+	position: fixed;
+	top: 300px;
+	left: -200px;
+	transition: left .2s linear .4s;
+	transition: url .2s linear .4s;
+}
+
+nav#ticket:HOVER {
+	left: 0px;
+}
+
+nav#ticket a, img {
+	border: none;
+}
+
+/* #ticket a:ACTIVE {
+	background-image: url("../images/coupon.gif");
+}
+ */
+#table {
+	border-spacing: 10px;
+}

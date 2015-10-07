@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+/* 셀렉터처럼 동작하지 않음.
+요소를 선택하는대신, @font-face는 */
+
+@font-face {
+	font-family: 'Calligraffitti', cursive;
+	/* src: url(http://fonts.googleapis.com/css?family=open+sans); */
+	@import url(https://fonts.googleapis.com/css?family=Calligraffitti);
+	/* 내 폰트 사용하기
+	https://www.google.com/fonts 에서 검색 사용 */
+	
+}
+
+body {
+	font-family: 'Calligraffitti', cursive;
+	background-image: url(../img/green.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	/* background-size: cover; - 배경 커버로 만드는 것이나... 사이즈 문제일까.. 안됨*/
+}
+
+h1, h2 {
+	color: gray;
+}
+
+h1 {
+	border-bottom: 1px solid black;
+	font-family: 'Calligraffitti', cursive;
+}
+
+p {
+	color: maroon;
+}
+
+p.greentea {
+	color: green;
+}
+
+em {
+	font-family: serif;
+}
+
+#bbb {
+	font-size: 20pt;
+	text-align: center;
+	color: #e366a2;
+}
+/* ID 정의 된 부분에 스타일 적용 방법 예제입니다. */
