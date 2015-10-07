@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- 
+NaN
+----
+NaN은 숫자가 아니라는 'Not a Number'를 뜻함.
+표현 할 수 없는 수치형 결과를 나타내기 위해 자바 스크립트는 NaN이라는 값을 사용.
+
+var a = 0/0;
+var b = "food" * 1000;
+var c = Maht.sqrt(-9);
+음수의 제곱근은 허수. 자바스크립트는 허수를 표현 할 수 없음.
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NaN검사</title>
+<script type="text/javascript">
+	var myNum = 0 / 0;
+// 	NaN인지 검사하는 방법이 틀림
+	if (myNum == NaN) {
+		myNum = 0;
+	}
+	alert(myNum);
+	
+// 	isNaN() : 자바 스크립트 내장 함수로 NAN인지 검사.	
+	if(isNaN(myNum)) {
+		myNum = 0;
+	}
+	alert(myNum);
+</script>
+</head>
+<body>
+</body>
+</html>

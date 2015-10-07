@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script>
+	function makeCar(){
+		var makes = ["쉐보레", "GM", "피아트", "웹타운 모터스", "터커" ];
+		var models = ["캐딜락", "500", "벨 에어", "택시", "토피도"];
+		var years = [1955, 1957, 1948, 1954, 1961];
+		var colors = ["빨간색", "파란색", "갈색", "노란색", "흰색"];
+		var convertible = [true, false];
+		
+		/* 
+		Math.ceil() 은 소수값이 존재할 때 올림
+   		Math.floor() 는 소수값이 존재할 때 버림
+   		Math.round() 는 소수값에 따라 반올림
+   		Math.random() 는 0.0보다  크거나 같고 1.0보다 작은 숫자를 래덤하게  뽑기
+   		변수.length : 배열된 개수
+		*/
+		var rand1 = Math.floor(Math.random() * makes.length);
+		var rand2 = Math.floor(Math.random() * models.length);
+		var rand3 = Math.floor(Math.random() * years.length);
+		var rand4 = Math.floor(Math.random() * colors.length);
+		var rand5 = Math.floor(Math.random() * 5) + 1;
+		var rand6 = Math.floor(Math.random() * 2);
+		
+		var car = {
+				make: makes[rand1],
+				// 만약 rand = 1 이면 make[1] == "GM"이고 make: "GM" , make[0]이 쉐보레
+				model: models[rand2],
+				year: years[rand3],
+				color: colors[rand4],
+				passengers: rand5,
+				convertible: convertible[rand6],
+				mileage:0,
+				drive: function(){
+					alert("뿡뿡");
+				} 
+		};
+		car.drive();
+		return car;
+	}
+	
+	function displayCar(car){
+		alert("여러분의 새로운 차는 " + car.year + " " + car.make + " " + car.model + "입니다."
+				);
+		car.drive();
+	}
+	
+	var carToSell = makeCar();
+	// 참조변수 carToSell에 함수 makeCar() 리턴값 car가 담김.
+	displayCar(carToSell);
+	// 인자 carToSell을  함수 displayCar()에 던짐.
+	
+</script>
+<title>오토매틱</title>
+</head>
+<body>
+
+</body>
+</html>

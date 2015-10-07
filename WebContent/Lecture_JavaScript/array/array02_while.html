@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>비눗방울 실험실</title>
+<script type="text/javascript">
+	var scores =[60, 50, 60, 58, 54, 54,
+	             58, 50, 52, 54, 48, 69,
+	             34, 55, 51, 44, 53, 44,
+	             69, 64, 66, 55, 54, 52,
+	             46, 31, 57, 22, 44, 18,
+	             41, 53, 55, 61, 51, 44];
+	var output;
+	
+	/*  
+	while(조건식)문
+	---------
+	var i = 0;
+		현재 처리하고 있는 요소의 인덱스 번호를 저장할 변수를 초기화
+		
+	i < scores.length
+		조건식
+		
+	i = i + 1;
+		마지막으로 루프 처음으로 돌아가기 전에 인덱스 번호를 하나 증가
+	*/
+	var i = 0;
+	while (i < scores.length) {
+		output = "비눗방울 용액 #" + i + " 점수: " + scores[i];
+		alert(output);
+		i++
+		/* i++은 "i = i + 1"과 같음 */
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

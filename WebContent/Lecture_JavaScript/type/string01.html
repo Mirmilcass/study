@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var emot = " X0xx00 ";
+	var hugs = 0;
+	var kisses = 0;
+
+	
+	//trim() 메서드는 문자열 앞뒤의 공백을 제거.
+	// 사용자 입력을 처리할 때 유용.
+	emot = emot.trim();
+	// toUpperCase() 메서드는 소문자를 모두 대문자로 바꿈.
+	emot = emot.toUpperCase();
+
+	// length 속성은 문자열에 들어 있는 글자 수를 말함.
+	for (var i = 0; i < emot.length; i++) {
+		// chartAt() 메서드는 문자열 안의 특정 인덱스에 있는 글자를 가져옴.
+		if (emot.charAt(i) === "X") {
+			alert(i + "번 인덱스에 X라는 글자가 있어요");
+			hugs++;
+		} else if (emot.charAt(i) == "0") {
+			alert(i + "번 인덱스에 0이라는 글자가 있어요");
+			kisses++;
+		}
+	}
+	alert(hugs);
+	alert(kisses);
+</script>
+</head>
+<body>
+</body>
+</html>
