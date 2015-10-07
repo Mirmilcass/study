@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>행성</title>
+<style type="text/css">
+.redtext {
+	color: red;
+}
+</style>
+<!-- DOM을 다룰 때에는 페이지가 완전히 로딩된 후에 코드를 실행해야 함.
+그렇지 않으면 DOM이 완성되기 전에 코드가 실행. -->
+<script type="text/javascript">
+	function init() {
+		var planet = document.getElementById("greenplanet");
+		planet.innerHTML = "적색경보: 박격포에 맞았습니다.";
+		planet.setAttribute("class", "redtext");
+	}
+	// 		함수명 뒤에 괄호를 사용하지 않음. 함수를 호출 하는 것이 아니라 window.onload 속성의 값으로 할당하기 떄문임.
+	// 		window : 자바 스크립트 내장 객체로 브라우저 창을 나타냄.
+	// 		window 객체는 웹페이지가 완전히 로딩된 이후에  onload 속성에 할당된 함수를 호출
+	window.onload = init;
+</script>
+<!-- 
+위 코드가 정상작동 하기 위한 방법
+1. 스크립트 내용을 /body 위에 복붙한다.
+2. function을 사용하여 페이지가 완성되면 불러와라 라는 객체인 window중 onload 속성을 부여해서 값을 설정 함수로 준다.
+ -->
+</head>
+<body>
+	<h1>녹색 행성</h1>
+	<p id="greenplanet">모두 정상입니다.</p>
+	<h1>적색 행성</h1>
+	<p id="redplanet">보고할 사항 없습니다.</p>
+	<h1>청색 행성</h1>
+	<p id="blueplanet">모두 시스템 정상입니다.</p>
+</body>
+</html>

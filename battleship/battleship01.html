@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- 1단계 게임의 틀 제작 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>전함 게임</title>
+<style type="text/css">
+body {
+	background-color: black;
+}
+
+div#board {
+	/* 
+	board <div> 의 위치를 상대적으로 잡았기 떄문에 다음 단계에서 이 <div> 요소 안에 있는 모든 요소들은
+	이 <div> 요소에 대해 상대적인 위치에 놓을 수 있음.
+	 */
+	position: relative;
+	width: 1024px;
+	height: 863px;
+	margin: auto;
+	background-image: url("img/board.jpg") no-repeat;
+}
+</style>
+</head>
+<body>
+	<!-- 게임판 구현을 위한 테이블과 사용자가 입력하기 위한 폼을 여기에 놓음 -->
+	<div id="board"></div>
+	<script type="text/javascript" src="js/battleship.js"></script>
+</body>
+</html>

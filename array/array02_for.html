@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>비눗방울 실험실</title>
+<script type="text/javascript">
+	var scores =[60, 50, 60, 58, 54, 54,
+	             58, 50, 52, 54, 48, 69,
+	             34, 55, 51, 44, 53, 44,
+	             69, 64, 66, 55, 54, 52,
+	             46, 31, 57, 22, 44, 18,
+	             41, 53, 55, 61, 51, 44];
+	var output;
+	
+	/*  
+	for문
+	--------
+	for(A; B; C)
+	A: var i = 0
+		카운트 변수 i 초기화
+	B: i < scores.length;
+		검사할 조건식을 담음. 바복에 들어가기 전에 매번 이 조건을 검사하고
+		참이면 진행하고 거짓이면 for문을 빠져나감.
+	C: i = i + 1
+		카운터를 증가시킴.
+	*/
+	
+	for (var i = 0; i < scores.length; i = i + 1) {
+		output = "비눗방울 용액 #" + i + " 점수: " + scores[i];
+		alert(output);
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

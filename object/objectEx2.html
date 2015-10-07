@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script>
+	var cadi = {
+			make: "GM",
+			model: "캐딜락",
+			year: 1955,
+			color: "갈색",
+			passenger: 5,
+			conbertible: false,
+			mileage: 12829,
+			started: false,
+			start: function(){
+				cadi.started = true;
+			},
+			stop: function(){
+				this.started = false;
+				// 객체의 메서드를 호출하면 this는 호출된 객체를 가리킴.
+				// this == cadi 개체
+			},
+			drive: function (){
+				if (this.started) {
+					alert(this.make + " " + this.model + "가 붕붕 달립니다. ");
+				} else {
+					alert("먼저 시동을 거세요");
+				}
+			}
+	}
+	
+	var chevy = {
+			make: "쉐보레",
+			model: "벨 에어",
+			year: 1957,
+			color: "빨간색",
+			passenger: 2,
+			conbertible: false,
+			mileage: 1021,
+			started: false,
+			start: function(){
+				this.started = true;
+			},
+			stop: function(){
+				this.started != true;
+				// !는 부정의 의미.
+			},
+			drive: function (){
+				if (this.started) {
+					alert(this.make + " " + this.model + "가 붕붕 달립니다.");
+				} else {
+					alert("먼저 시동을 거세요.");
+				}
+			}
+	}
+	cadi.start();
+	cadi.drive();
+	cadi.stop();
+	cadi.drive();
+	
+	chevy.start();
+	chevy.drive();
+	chevy.stop();
+	chevy.drive();
+</script>
+</head>
+<body>
+
+</body>
+</html>
