@@ -213,7 +213,9 @@ function fire() {
 
 function init() {
 	var fireButton = document.getElementById("fireButton");
-	fireButton.onclick = handleFireButton; 
+	fireButton.onclick = handleFireButton;
+	var guessInput = document.getElementById("guessInput");
+		guessInput.onkeypress = hendelKeyPress;
 }
 
 function handleFireButton() { 
@@ -222,6 +224,15 @@ function handleFireButton() {
 	controller.processGuess(guess);
 	// 한번 입력 후 기존 입력값을 지움
 	guessInput.value = "";
+}
+
+function hendelKeyPress(e) {
+	var fireButton = document.getElementById("fireButton");
+	// [return]의 키 값이 13번임.
+	if (e.keyCode == 13) {
+		fireButton.click();
+		return false;
+	}
 }
 
 window.onload = init;
