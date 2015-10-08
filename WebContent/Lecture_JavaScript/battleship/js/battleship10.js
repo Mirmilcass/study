@@ -185,8 +185,9 @@ var controller = {
 	}
 };
 
+/*
 //발사실험
-controller.pr/*ocessGuess("S0S");
+controller.processGuess("S0S");
 controller.processGuess("SO");
 controller.processGuess("A0");
 
@@ -203,7 +204,24 @@ controller.processGuess("B2");
 controller.processGuess("B0");
 */
 
+/*// 인터넷 참조 내 구조 HTML input button 에 onclick=fire() 삽입.
 function fire() {
 	var point = document.getElementById("guessInput");
 	controller.processGuess(point.value);
 }
+*/
+
+function init() {
+	var fireButton = document.getElementById("fireButton");
+	fireButton.onclick = handleFireButton; 
+}
+
+function handleFireButton() { 
+	var guessInput = document.getElementById("guessInput");
+	var guess = guessInput.value;
+	controller.processGuess(guess);
+	// 한번 입력 후 기존 입력값을 지움
+	guessInput.value = "";
+}
+
+window.onload = init;
