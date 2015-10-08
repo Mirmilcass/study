@@ -1,0 +1,59 @@
+<!-- 
+모든 그림에 대해 동일 처리기 재사용
+
+1. showAnswer () 페이지에 있는 모든 그림의 클릭처리기 할당.
+2. jero.jpg 뿐만 아니라 어떤 그림이라도 원래 그림을 보여주도록
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>그림 알아 맞히기</title>
+<style type="text/css">
+body {
+	margin: 20px;
+}
+
+img {
+	margin: 20px;
+}
+</style>
+<script type="text/javascript">
+	window.onload = init;
+	function init() {
+
+		// TagName 은 img 요소를 전부 가져옴.
+		var images = document.getElementsByTagName("img");
+
+		for (var i = 0; i < images.length; i++) {
+			images[i].onclick = showAnswer;
+		} // for END
+	} // init END
+	/* 
+	그림을 클릭 했을때 이벤트 발생. 이벤트 객체(e) 생성 -> 이벤트 처리기에 생성된 이벤트 객체를 인자(e)로 전달.
+	이벤트 객체 e에는
+	1. 어느 요소가 이벤트를 발생시켰는지.
+	2. 언제 이벤트가 발생했는지 등 이벤트에 관한 일반적인 정보를 담고 있다.
+	3. 마우스 클릭 이벤트의 경우 클릭한 좌표값등 이벤트에 관한 고유정보도 담고 있다.
+	 */
+	function showAnswer(e) {
+		/* 
+		event 객체 내 target 속성
+		이벤트를 발생시킨 객체에 대한 참조를 가지고 있다. 대부분 요소 객체(img)를 가져옴
+		 */
+		var image = e.target;
+		var name = image.id
+		name = "img/" + name + ".jpg";
+		image.src = name;
+	}
+</script>
+</head>
+<body>
+	<img id="zero" src="img/zeroblur.jpg">
+	<img id="one" src="img/oneblur.jpg">
+	<img id="two" src="img/twoblur.jpg">
+	<img id="three" src="img/threeblur.jpg">
+	<img id="four" src="img/fourblur.jpg">
+	<img id="five" src="img/fiveblur.jpg">
+</body>
+</html>

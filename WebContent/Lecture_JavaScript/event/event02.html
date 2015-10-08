@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>그림 알아맞히기</title>
+<style type="text/css">
+body {
+	margin: 20px;
+}
+
+img {
+	margin: 20px;
+}
+</style>
+<script type="text/javascript">
+	window.onload = init;
+	function init() {
+		var image0 = document.getElementById("zero"); // DOM 안에 있는 그림에 접근
+		var image1 = document.getElementById("one");
+		var image2 = document.getElementById("two");
+		var image3 = document.getElementById("three");
+		var image4 = document.getElementById("four");
+		var image5 = document.getElementById("five");
+
+		// onclick 속성에 이벤트 처리기 할당
+		image0.onclick = showImageZero;
+		image1.onclick = showImageOne;
+		image2.onclick = showImageTwo;
+		image3.onclick = showImageThree;
+		image4.onclick = showImageFour;
+		image5.onclick = showImageFive;
+	}
+	function showAnswer() {
+		var image = document.getElementById("zero");
+		image.src = "img/zero.jpg";
+	}
+	function showImageZero() {
+		var image = document.getElementById("zero");
+		image.src = "img/zero.jpg";
+	}
+	function showImageOne() {
+		var image = document.getElementById("one");
+		image.src = "img/one.jpg";
+	}
+	function showImageTwo() {
+		var image = document.getElementById("two");
+		image.src = "img/two.jpg";
+	}
+	function showImageThree() {
+		var image = document.getElementById("three");
+		image.src = "img/three.jpg";
+	}
+	function showImageFour() {
+		var image = document.getElementById("four");
+		image.src = "img/four.jpg";
+	}
+	function showImageFive() {
+		var image = document.getElementById("five");
+		image.src = "img/five.jpg";
+	}
+</script>
+</head>
+<body>
+	<img id="zero" src="img/zeroblur.jpg">
+	<img id="one" src="img/oneblur.jpg">
+	<img id="two" src="img/twoblur.jpg">
+	<img id="three" src="img/threeblur.jpg">
+	<img id="four" src="img/fourblur.jpg">
+	<img id="five" src="img/fiveblur.jpg">
+</body>
+</html>

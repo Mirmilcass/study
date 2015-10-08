@@ -1,0 +1,28 @@
+<!-- 먼저 브라우저가 페이지를 로딩하고 HTML을 파싱한 후에 DOM 객체를 만든다. -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>처리기 작동</title>
+<script type="text/javascript">
+	// 1. 먼저 페이지 로딩 완료되었을때 "처리기 작동" 알림창을 보여줌
+	function pageLoadedHandler() {
+		alert("처리기 작동");
+	}
+	/* 
+		2. 페이지 로딩 완료 이벤트가 발생했을 때 실생할 함수가 있다는 것을 브라우저가 알 수 있도록 연결
+		여기에서는 함수를 정의하고 window.onload 속성에 pageLoadedHandler() 함수를 할당할 뿐이다.
+		실행 되지는 않음.
+	 */
+	window.onload = pageLoadedHandler;
+</script>
+</head>
+<body>
+
+</body>
+<!-- 
+여기까지가 브라우저가 HTML 파싱을 완료하는 시점.
+파싱이 완료되면 DOM 객체의 생성도 완료.
+이후에 pageLoadedHandler()를 호출.
+ -->
+</html>
