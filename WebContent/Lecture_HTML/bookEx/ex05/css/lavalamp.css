@@ -1,1 +1,62 @@
 @CHARSET "UTF-8";
+
+@import "../../css/reset.css";
+@import url(https://fonts.googleapis.com/css?family=Montez);
+
+body {
+	background: #eeece7;
+}
+
+h1 {
+	font-family: 'Montez', cursive;
+	font : 52px/1 'Montez';
+	color: #a4834d;
+}
+
+h1+p {
+	margin-bottom: 3.5em;
+}
+
+#page-wrap {
+	width: 960px;
+	margin: 30px auto;
+	padding: 3em;
+	background: #ffffff;
+	
+	/* 	
+	박스의 그림자를 안쪽 방향으로 설정
+	box-shadow : x축 거리, y축 거리, blur 두께, 그림자 색상, 안쪽 또는 바깥쪽(기본값) 
+	 */
+	box-shadow: 0px 0px 2px #62615f inset;
+	border-radius: 20px;
+	
+}
+
+nav#navigation {
+	padding: 3px;
+}
+
+nav#navigation li {
+	float: left;
+	border-right: 1px solid #eeeeee;
+}
+
+nav#navigation li a:HOVER,
+nav#navigation li a:FOCUS,
+nav#navigation li.focus a {
+	border-radius: 6px;
+	background-image: linear-gradient(-90deg, #887963, #0b0a09);
+	box-shadow: 0px 0px 2px #69635a;
+}
+
+nav#navigation li a {
+	border: 0;
+	padding: 10px;
+	font: 14px/1 'Verdana';
+	color: #a49e96;
+}
+
+nav#navigation li:last-child {
+	border: 0;
+}
+
