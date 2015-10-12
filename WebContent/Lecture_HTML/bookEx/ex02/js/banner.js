@@ -9,9 +9,9 @@
 		var banner_audio = new Audio();
 		webm = isSupportWebM();
 		if (webm) {
-			banner_audio.src = 'media/banner_sound.webm';
+			banner_audio.src = "../media/banner_sound.webm";
 		} else {
-			banner_audio.src = 'media/banner_sound.mp3';
+			banner_audio.src = "../media/banner_sound.mp3";
 		}
 		// "banner" 클래스를 가진 요소를 가져옴(jQuery에서는 요소 선택시 css 구문을 사용)
 		// 그리고 bind()라는 jQuery 메소드를 호출함
