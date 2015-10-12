@@ -125,7 +125,16 @@ function hendelKeyPress(e) {
 function showAnswer(e) {
 	var point = e.target;
 	var guess = point.id;
-	model.fire(guess);
+	
+	if (guess) {
+		var hit = model.fire(guess);
+		controller.guesses++;
+		
+		if (hit && model.shipsSunk === model.numShips) {
+			view.displayMessage("여러분은 " + controller.guesses + "번 추측해 전함을 모두 격침시켰습니다.");
+		}
+
+	}
 }
 
 window.onload = init;
