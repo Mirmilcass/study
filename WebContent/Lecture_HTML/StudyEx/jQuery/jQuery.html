@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery</title>
+
+<!-- 1. 다운 받아 가지고 있는 파일을 연결 한 방식 -->
+<!-- <script type="text/javascript" src="../../bookEx/js/jquery-2.1.4.js"></script> -->
+
+<!-- 2. 인터넷상에 올려둔 클라우드 파일을 가져온 방식 (CDN) -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	/*/// 자바 스크립트 버전 ///
+	window.onload = function() {
+		alert("페이지 로딩 완료!");
+	}
+	 */
+
+	// jQuery 버전
+	$(document).ready(function() {
+		alert("페이지 로딩 완료");
+	});
+
+	$(function() {
+		alert("페이지 로딩 완료");
+	});
+
+	$(function() {
+		$("#buynow").click(function() {
+			alert("지금 구매")
+		});
+	});
+	
+	$(function() {
+		$("a.move").click(function() {
+			alert("지금 이동합니다")
+		});
+	});
+	
+	$(function() {
+		$("#specialoffer").click(function() {
+			$(this).fadeOut(800, function() {
+				$(this).fadeIn(400);
+			});
+		});
+	});
+	
+</script>
+</head>
+<body>
+	자바 스크립트 라이브러리로서 DOM 객체를 사용해서 화면에 시각적 효과를 제공해야 하는 코드를 간단히 작성할 수 있게 도와줌. 
+	자바스크립트로 할 수 없다면 jQuery도 할 수 없음. 그렇지만 작성해야 하는 코드의 양을 줄여주기 때문에 사용함.
+
+	<input type="button" value="지금 구매" id="buynow">
+	<p>
+	<div id="specialoffer">특별한 상품입니다.</div>
+	
+	<ul>
+	<li><a class="move" href="http://www.google.co.kr">구글</a></li>
+	<li><a class="move" href="http://www.naver.com">네이버</a></li>
+	<li><a class="move" href="http://github.com">Github</a></li>
+	<li><a class="move" href="http://www.naver.com">네이버</a></li>
+	</ul>
+</body>
+</html>
