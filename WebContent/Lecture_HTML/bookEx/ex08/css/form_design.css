@@ -81,34 +81,34 @@ body {
 	color: #31a8d7;
 }
 
-#u_name {
+#reg #u_name {
 	background-position: 0 4px;
 }
-#u_name:FOCUS {
+#reg #u_name:FOCUS {
 	background-position: 0 -24px;
 }
-#u_phone {
+#reg #u_phone {
 	background-position: 0 -52px;
 }
-#u_phone:FOCUS{
+#reg #u_phone:FOCUS{
 	background-position: 0 -80px;
 }
-#u_email {
+#reg #u_email {
 	background-position: 0 -108px;
 }
-#u_email:FOCUS{
+#reg #u_email:FOCUS{
 	background-position: 0 -136px;
 }
-#u_site {
+#reg #u_site {
 	background-position: 0 -164px;
 }
-#u_site:FOCUS{
+#reg #u_site:FOCUS{
 	background-position: 0 -192px;
 }
-#u_password {
+#reg #u_password {
 	background-position: 0 -220px;
 }
-#u_password:FOCUS {
+#reg #u_password:FOCUS {
 	background-position: 0 -248px;
 }
 
