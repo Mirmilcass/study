@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS3 Web Form Design - 웹 폼 디자인</title>
+
+<link type="text/css" rel="stylesheet" href="css/form_design.css">
+<!-- <link href='http://api.mobilis.co.kr/webfonts/v2/css/NanumGothicWeb' rel='stylesheet' type='text/css' /> -->
+<!-- <link href='https://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'> -->
+
+
+<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="../js/modernizr.min.js"></script>
+</head>
+<body>
+	<div id="reg">
+		<h2 title="회원등록">Registration</h2>
+		<form id="reg_form" action="#" method="post">
+			<p>
+				<label for="u_name"> 이름 </label>
+				<input id="u_name" name="u_name" type="text" placeholder="이름" required>
+			</p>
+			<p>
+				<label for="u_phone"> 연락처 </label>
+				<input id="u_phone" name="u_phone" type="tel" placeholder="연락처" required>
+			</p>
+			<p>
+				<label for="u_email"> 이메일 </label>
+				<input id="u_email" name="u_email" type="email" placeholder="이메일" required>
+			</p>
+			<p>
+				<label for="u_site"> 웹 사이트 </label>
+				<input id="u_site" name="u_site" type="url" placeholder="웹 사이트">
+			</p>
+			<p>
+				<label for="u_password"> 비밀번호 </label>
+				<input id="u_password" name="u_password" type="password" placeholder="비밀번호" required>
+			</p>
+			<p id="accept">
+				<input id="accept_terms" name="accept_terms" type="checkbox">
+				<label for="accept_terms"> <strong> <a href="#" rel="external" target="_blank"> 서비스 이용 약관</a>, <a href="#"
+							rel="external" target="_blank"> 개인정보 수집이용</a>에 동의
+				</strong> 합니다.
+				</label>
+			</p>
+			<p id="add_count">
+				<button id="reg_new" type="submit" title="회원가입">+</button>
+			</p>
+		</form>
+	</div>
+	<!-- reg END -->
+</body>
+</html>
