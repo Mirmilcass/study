@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Array</title>
+
+<style type="text/css">
+.highlight0 {
+	background-color: yellow;
+}
+
+.highlight1 {
+	background-color: orange;
+}
+
+.highlight2 {
+	background-color: blue;
+}
+
+.highlight3 {
+	background-color: red;
+}
+
+.highlight4 {
+	background-color: green;
+}
+
+.highlight5 {
+	background-color: gray;
+}
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var array = [ {
+			name : 'google',
+			link : 'http://www.google.com'
+		}, {
+			name : 'naver',
+			link : 'http://www.naver.com'
+		}, {
+			name : 'daum',
+			link : 'http://www.daum.net'
+		} ];
+		// each(배열, index, i)
+		$.each(array, function(index, item) {
+			var output = '';
+			output += '<a href="' + item.link + '">';
+			output += '<h1>' + item.name + '</h1>';
+			output += '</a>';
+
+			document.body.innerHTML += output;
+		});
+
+		$('h1').each(function(index, item) {
+			$(this).addClass('highlight' + index);
+		});
+	});
+</script>
+
+</head>
+<body>
+
+	<h1>header0</h1>
+	<h1>header1</h1>
+	<h1>header2</h1>
+	<h1>header3</h1>
+	<h1>header4</h1>
+	<h1>header5</h1>
+
+</body>
+</html>

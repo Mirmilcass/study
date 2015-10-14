@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Selector</title>
+
+<script type="text/javascript" src="../../Lecture_HTML/bookEx/js/jquery-2.1.4.js"></script>
+
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		// 위치 필터 선택자
+		$('table.1st tr:odd').css('background', '#f9f9f9');
+		$('table.1st tr:even').css('background', '#9f9f9f');
+		// 	$('table.1st tr:first').css('background', '#000000').css('color', '#ffffff');
+		$('table.1st tr:first').css({
+			'background' : '#000000',
+			'color' : '#ffffff'
+		});
+		/* 	$('tr:first', {
+				css : {
+					'background' : '#000000',
+					'color' : '#ffffff'
+				}
+			}).insertAfter('table.1st'); */
+
+		// 함수 필터 선택자
+		$('table#2nd tr:eq(0)').css({'background': '#000000', 'color': '#ffffff'});
+		$('table#2nd td:nth-child(2n+1)').css('background', '#565656');
+		$('table#2nd td:nth-child(2n)').css('background', '#f9f9f9');
+	})
+</script>
+</head>
+<body>
+	<table class="1st" border="1">
+		<tbody>
+			<tr>
+				<td>이름</td>
+				<td>제조사</td>
+			</tr>
+			<tr>
+				<td>갤럭시 S4</td>
+				<td>삼성</td>
+			</tr>
+			<tr>
+				<td>갤럭시 S3</td>
+				<td>삼성</td>
+			</tr>
+			<tr>
+				<td>G4</td>
+				<td>엘지</td>
+			</tr>
+			<tr>
+				<td>Vu3</td>
+				<td>엘지</td>
+			</tr>
+			<tr>
+				<td>아이폰 5S</td>
+				<td>애플</td>
+			</tr>
+			<tr>
+				<td>아이폰6플러스</td>
+				<td>애플</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+	<table id="2nd" border="1">
+		<tbody>
+			<tr>
+				<td>이름</td>
+				<td>제조사</td>
+				<td>크기</td>
+				<td>버전</td>
+			</tr>
+			<tr>
+				<td>갤럭시 S4</td>
+				<td>삼성</td>
+				<td>크기</td>
+				<td>버전</td>
+			</tr>
+			<tr>
+				<td>갤럭시 S3</td>
+				<td>삼성</td>
+				<td>크기</td>
+				<td>버전</td>
+			</tr>
+			<tr>
+				<td>G4</td>
+				<td>엘지</td>
+				<td>크기</td>
+				<td>버전</td>
+			</tr>
+			<tr>
+				<td>Vu3</td>
+				<td>엘지</td>
+				<td>크기</td>
+				<td>버전</td>
+			</tr>
+			<tr>
+				<td>아이폰 5S</td>
+				<td>애플</td>
+				<td>크기</td>
+				<td>버전</td>
+			</tr>
+			<tr>
+				<td>아이폰6플러스</td>
+				<td>애플</td>
+				<td>크기</td>
+				<td>버전</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
