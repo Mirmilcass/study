@@ -1,0 +1,137 @@
+<!-- 
+필터 메서드
+---------
+
+1. 기본 필터 메서드
+	$(selector).filter(selctor);
+	$(selector).filter(function(){}); 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery 선택자</title>
+
+<style>
+div#length div {
+	width: 60px;
+	height: 60px;
+	margin: 5px;
+	float: left;
+	border: 2px white solid;
+}
+
+div#index {
+	clear: both;
+}
+
+div#index div {
+	width: 60px;
+	height: 60px;
+	margin: 5px;
+	float: left;
+	border: 3px white solid;
+}
+</style>
+
+<script
+	type="text/javascript"
+	src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// 1. .filterf( selector )
+		$(".1st li").filter(":even").css("background-color", "red");
+		$(".1st li").filter(":odd").css("background-color", "blue");
+
+		// 2. .filter( function )
+		$("#2nd li").filter(function(index) {
+			return $("strong", this).length === 1;
+		}).css("background-color", "yellow");
+
+		$("#2nd li").filter(function(index) {
+			return index % 3 === 2;
+		}).css("background-color", "orange");
+
+		/* 		
+		$('h1:even').css({
+			backgroundColor : 'black',
+			color : 'white'
+		});
+
+		$('h1').filter(':even').css({
+			backgroundColor : 'black',
+			color : 'white'
+		});
+		 */
+
+		// 필터 메서드
+		/* 
+		$('h1').filter(function(index) {
+			return index % 3 == 0;
+		}).css({
+			backgroundColor : 'black',
+			color : 'white'
+		});
+		*/
+
+		$("div#length>*").css("background", "#c8ebcc").filter(".middle").css("border-color", "red");
+
+		$("div#index>*").css("background", "#b4b0da").filter(function(index) {
+			return index === 1
+					|| $(this).attr("id") === "fourth";
+		}).css("border", "3px double red");
+
+	});
+</script>
+</head>
+<body>
+	<h1>header0</h1>
+	<h1>header1</h1>
+	<h1>header2</h1>
+	<h1>header3</h1>
+	<h1>header4</h1>
+	<h1>header5</h1>
+
+	<p>
+	<div id="even_select">
+		<ul class="1st">
+			<li>list item 1</li>
+			<li>list item 2</li>
+			<li>list item 3</li>
+			<li>list item 4</li>
+			<li>list item 5</li>
+			<li>list item 6</li>
+		</ul>
+	</div>
+	<p>
+	<div id="strong_length">
+		<ul id="2nd">
+			<li><strong>list</strong> item 1 - one strong tag</li>
+			<li><strong>list</strong> item <strong>2</strong> - two <span>strong tags</span></li>
+			<li>list item 3</li>
+			<li>list item 4</li>
+			<li>list item 5</li>
+			<li>list item 6</li>
+		</ul>
+	</div>
+
+	<div id="length">
+		<div></div>
+		<div class="middle"></div>
+		<div class="middle"></div>
+		<div class="middle"></div>
+		<div class="middle"></div>
+		<div></div>
+	</div>
+	<p>
+	<div id="index">
+		<div id="first"></div>
+		<div id="second"></div>
+		<div id="third"></div>
+		<div id="fourth"></div>
+		<div id="fifth"></div>
+		<div id="sixth"></div>
+	</div>
+</body>
+</html>

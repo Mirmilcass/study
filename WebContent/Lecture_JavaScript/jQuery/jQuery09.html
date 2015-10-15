@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animate demo</title>
+
+<style type="text/css">
+div#clickme {
+	width: 100px;
+	height: 100px;
+	background-Color: blue;
+	color: red;
+	text-align: center;
+	line-height: 100px;
+}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+	<div id="clickme">Click here</div>
+
+	<img id="picture" src="../event/img/zero.jpg" alt="zero" width="100px" height="123px" style="position: relative;">
+
+	<script type="text/javascript">
+		$("div#clickme").click(function() {
+			$("#picture").animate({
+				opacity : 0.25,
+				left : "+50",
+				height : "toggle"
+			});
+		});
+	</script>
+</body>
+</html>
